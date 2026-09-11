@@ -25,17 +25,17 @@ const PRINCIPLES = [
   {
     n: '01',
     name: 'Precision is the floor',
-    desc: 'Every figure traces to a source document. Audit-ready by default — not as an upgrade. The institutional discipline we built inside a family office is the operating floor of every engagement.'
+    desc: 'Every figure traces to a source document, on every engagement, at no extra cost. This is the standard we built inside a family office and it is where all of our work starts.'
   },
   {
     n: '02',
-    name: 'Strategic, not transactional',
-    desc: 'We close the books, then we read them. Which means we interpret what the numbers mean for the next decision, the next quarter, the next round, not the last one. Every reporting cycle ends with a forward-looking view your leadership can act on.'
+    name: 'Close the books, then read them',
+    desc: 'Closing the books is the first half of the job. The second half is telling you what they mean for the decisions coming up: the next quarter, the next round, the next conversation with your lender. Every reporting cycle ends with that view.'
   },
   {
     n: '03',
     name: 'Tech-forward, by default',
-    desc: 'Early adopters of AI-integrated workflows and process automation. Reporting infrastructure is built around your data and your stack, not retrofitted onto a generic template. Process design is part of the deliverable, not an afterthought.'
+    desc: 'We automate the parts of close and reporting that should be automated, and we build inside the systems your team already uses. How the process runs is part of what we hand over, not something we work out later.'
   },
   {
     n: '04',
@@ -127,7 +127,7 @@ export default function About() {
                 letterSpacing: '-0.025em',
                 lineHeight: 1.05,
               }}>
-                Built for Institutions,<br />
+                Ten people,<br />
                 <em style={{ fontFamily: 'var(--sans)', fontStyle: 'italic' }}>Ready for Scale</em>
               </h1>
             </div>

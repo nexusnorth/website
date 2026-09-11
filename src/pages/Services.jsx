@@ -1,25 +1,25 @@
 import { Link } from 'react-router-dom'
 
 const SERVICES_LONG = [
-  { n: '01', tag: 'Strategic Finance', title: 'Fractional CFO & Strategic Finance', intro: 'Senior financial leadership on your side — to guide strategy, sharpen decision-making, and steward growth at a fraction of the cost of a full-time CFO. Engagements are scoped to your stage, your stakeholders, and the calls coming up.', items: ['Financial strategy & planning','Board-ready reporting & investor packages','Fundraising & investor relations','Cash flow forecasting & management','Strategic scenario modelling','M&A and transaction advisory'] },
-  { n: '02', tag: 'Financial Operations', title: 'Bookkeeping & Financial Operations', intro: 'Accurate, disciplined financial operations that create a clean, defensible foundation for reporting, analysis, and strategic oversight. Every figure traces back to a source — and the books close on schedule.', items: ['Day-to-day bookkeeping','Accounts payable & receivable','Monthly close & reconciliation','Financial statement preparation','Multi-entity accounting','Inter-company complex accounting'] },
-  { n: '03', tag: 'Special Projects', title: 'Advisory & Special Projects', intro: 'Targeted financial support for complex situations, transactions, and time-sensitive initiatives that fall outside day-to-day operations: receivership, diligence, historical reconstruction.', items: ['Due diligence support','Historical reconstruction','System implementation & migration','Financial process improvement','Audit preparation','Break-even and Variance analyses'] },
+  { n: '01', tag: 'Strategic Finance', title: 'Fractional CFO & Strategic Finance', intro: 'Senior finance leadership at a fraction of the cost of a full-time CFO. We work on the strategy, the board reporting, and the calls that are coming up. Every engagement is scoped to your stage and to who else is reading the numbers.', items: ['Financial strategy & planning','Board-ready reporting & investor packages','Fundraising & investor relations','Cash flow forecasting & management','Strategic scenario modelling','M&A and transaction advisory'] },
+  { n: '02', tag: 'Financial Operations', title: 'Bookkeeping & Financial Operations', intro: 'The books close on schedule and every figure traces back to a source. This is the foundation everything else on this page depends on.', items: ['Day-to-day bookkeeping','Accounts payable & receivable','Monthly close & reconciliation','Financial statement preparation','Multi-entity accounting','Inter-company complex accounting'] },
+  { n: '03', tag: 'Special Projects', title: 'Advisory & Special Projects', intro: 'Support for the situations that fall outside the monthly cycle: receivership, due diligence, historical reconstruction, and deadlines that cannot move.', items: ['Due diligence support','Historical reconstruction','System implementation & migration','Financial process improvement','Audit preparation','Break-even and Variance analyses'] },
 ]
 
 const FCR_DELIVERABLES = [
-  { n: '01', name: 'Bank & reconciliation review', desc: 'Every account walked, every variance flagged, every unreconciled balance explained.' },
+  { n: '01', name: 'Bank & reconciliation review', desc: 'We walk every account, flag the variances, and explain any balance that will not reconcile.' },
   { n: '02', name: 'Balance sheet integrity check', desc: 'Asset, liability, and equity positions tested for accuracy and source-traceability.' },
   { n: '03', name: 'P&L accuracy assessment', desc: 'Revenue recognition, expense classification, and margin analysis benchmarked against your business.' },
-  { n: '04', name: 'Controls & policy review', desc: 'How your books are kept, who has access, where the risk sits, what a tightening plan looks like.' },
+  { n: '04', name: 'Controls & policy review', desc: 'How the books are kept, who has access, where the risk sits, and what tightening it up would involve.' },
   { n: '05', name: 'Readiness score (0–100)', desc: 'A quantified view of where your finance function sits, scored against our readiness framework.' },
-  { n: '06', name: 'Priority action plan', desc: 'The next 90 days, sequenced. What to fix first, what to leave for later, and what good looks like.' },
+  { n: '06', name: 'Priority action plan', desc: 'The next 90 days in order: what to fix first, what can wait, and what the finished state looks like.' },
 ]
 
 const ENGAGEMENT_STEPS = [
   { n: '01', t: 'Discovery',  d: 'A focused conversation about your business, your financial history, and what you need your numbers to do.' },
   { n: '02', t: 'Assessment', d: 'We review your current financial setup, identify the gaps, and quantify them against our readiness framework.' },
-  { n: '03', t: 'Proposal',   d: 'Clear deliverables, realistic timelines, transparent pricing. Fixed fee or retainer, never a packaged template.' },
-  { n: '04', t: 'Execution',  d: 'We get to work, with regular updates, full accountability, and a clear hand-off on every deliverable.' },
+  { n: '03', t: 'Proposal',   d: 'Deliverables, timelines, and price in writing. Fixed fee or retainer, whichever fits the work.' },
+  { n: '04', t: 'Execution',  d: 'We get to work. You get regular updates and a clear hand-off on every deliverable.' },
 ]
 
 export default function Services() {
@@ -84,7 +84,7 @@ export default function Services() {
               <span className="eyebrow eyebrow--light">Financial Clarity Report</span>
               <h2 className="fcr-feature__title">Where most engagements start<br /><em>a two-week diagnostic</em></h2>
             </div>
-            <p className="fcr-feature__intro">A fixed-fee, two-week engagement that gives you a complete picture of your financial health. Gaps, risks, controls, and a prioritized action plan, scored against our readiness framework.</p>
+            <p className="fcr-feature__intro">Two weeks, fixed fee. You get a written report on where the finance function actually stands: the gaps, the risks, the controls, and what to fix first, scored against our readiness framework.</p>
           </div>
           <div className="fcr-feature__body">
             <div className="fcr-feature__price">
@@ -124,7 +124,7 @@ export default function Services() {
               <span className="eyebrow">Our process</span>
               <h2 className="h-section">How an engagement<br /><em>actually starts</em></h2>
             </div>
-            <p className="eng__intro">Four steps from first email to first deliverable. Everything is sequenced, nothing is templated — you see the scope, the timeline, and the price before any work begins.</p>
+            <p className="eng__intro">Four steps from the first email to the first deliverable. You see the scope, the timeline, and the price before any work starts.</p>
           </div>
           <div className="eng__steps">
             {ENGAGEMENT_STEPS.map(s => (

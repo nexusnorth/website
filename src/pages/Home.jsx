@@ -24,36 +24,36 @@ const DIFFERENTIATORS = [
 const SERVICES = [
   {
     title: 'Fractional CFO & Strategic Finance',
-    desc: 'Senior financial leadership on your side — strategy, board reporting, fundraising support, and scenario planning.',
+    desc: 'Senior finance leadership without the full-time hire. Board reporting, scenario models, and support through a raise.',
     bullets: ['Board & investor reporting', 'Cash flow & scenario modeling', 'Capital raise support', 'KPI & operating dashboards'],
     icon: <svg viewBox="0 0 44 44" fill="none"><path d="M8 38V14l14-8 14 8v24" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/><path d="M16 38V26h12v12" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/><circle cx="32" cy="32" r="8" stroke="currentColor" strokeWidth="1.6"/><path d="M29.5 32l2 2 3.5-3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>,
   },
   {
     title: 'Bookkeeping & Financial Operations',
-    desc: 'Accurate, disciplined books that create a clean foundation for every report and every decision.',
+    desc: 'Books closed on schedule, reconciled, and documented well enough to hand straight to an auditor.',
     bullets: ['Month-end close & reconciliations', 'Chart of accounts design', 'Audit-ready workpapers', 'AP / AR workflows'],
     icon: <svg viewBox="0 0 44 44" fill="none"><rect x="6" y="6" width="14" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.6"/><rect x="24" y="6" width="14" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.6"/><rect x="6" y="24" width="14" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.6"/><rect x="24" y="24" width="14" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.6"/></svg>,
   },
   {
     title: 'Advisory & Special Projects',
-    desc: 'Targeted support for transactions, distressed situations, and time-sensitive financial work outside day-to-day operations.',
+    desc: 'Work that sits outside the monthly cycle. Transactions, distressed files, and deadlines that cannot move.',
     bullets: ['Receivership & restructuring', 'M&A diligence support', 'Historical reconstruction', 'Public-market preparation'],
     icon: <svg viewBox="0 0 44 44" fill="none"><path d="M6 34L16 22l8 8 6-8 8-12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/><circle cx="36" cy="10" r="3.5" stroke="currentColor" strokeWidth="1.6"/><path d="M4 40h36" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>,
   },
 ]
 
 const PROCESS = [
-  { n: '01', title: 'Discovery',   desc: 'We learn your business, your financial history, and what you need your numbers to do. Stakeholders, goals, constraints — captured.', deliverables: ['Stakeholder interviews', 'Business context memo', 'Engagement priorities'], icon: <><circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="1.8"/><path d="M16 16l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></> },
-  { n: '02', title: 'Diagnostic',  desc: 'Structured assessment of your financial ecosystem — books, controls, records, gaps — delivered with a quantified readiness score.', deliverables: ['Financial Clarity Report', 'Readiness score (0–100)', 'Prioritized action plan'], icon: <><rect x="4" y="4" width="16" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><path d="M8 9h8M8 13h6M8 17h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></> },
-  { n: '03', title: 'Scoping',     desc: 'We define the engagement, set up systems, align your chart of accounts, and establish the reporting cadence your stakeholders need.', deliverables: ['Engagement charter', 'COA & systems alignment', 'Reporting calendar'], icon: <><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></> },
-  { n: '04', title: 'Execution',   desc: 'Monthly close, reconciliations, and financial statements — delivered on schedule and fully evidence-backed.', deliverables: ['Monthly close package', 'Source-traced workpapers', 'Variance commentary'], icon: <path d="M20 7L10 17l-5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/> },
-  { n: '05', title: 'Intelligence', desc: 'Management reporting and forward-looking analysis structured for decisions — not just compliance. The numbers earn their keep.', deliverables: ['Board / investor pack', 'Operating dashboards', 'Forecast & scenarios'], icon: <path d="M4 17L9 12l5 5 3-4 3-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/> },
+  { n: '01', title: 'Discovery',   desc: 'We go through the business, the financial history, and what you need the numbers to do. We also ask who else sees the reporting, because that usually changes how we build it.', deliverables: ['Stakeholder interviews', 'Business context memo', 'Engagement priorities'], icon: <><circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="1.8"/><path d="M16 16l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></> },
+  { n: '02', title: 'Diagnostic',  desc: 'A structured review of the books, the controls, and the records, with a readiness score at the end. You get the written report either way.', deliverables: ['Financial Clarity Report', 'Readiness score (0–100)', 'Prioritized action plan'], icon: <><rect x="4" y="4" width="16" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><path d="M8 9h8M8 13h6M8 17h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></> },
+  { n: '03', title: 'Scoping',     desc: 'We agree the scope, set up the systems, fix the chart of accounts, and put a reporting calendar in place. It is easier to configure this correctly now than to change it later.', deliverables: ['Engagement charter', 'COA & systems alignment', 'Reporting calendar'], icon: <><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></> },
+  { n: '04', title: 'Execution',   desc: 'Monthly close, reconciliations, and statements, on the date we agreed, with the workpapers sitting behind them.', deliverables: ['Monthly close package', 'Source-traced workpapers', 'Variance commentary'], icon: <path d="M20 7L10 17l-5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/> },
+  { n: '05', title: 'Intelligence', desc: 'Management reporting and forecasts built for the decisions you actually have to make. This is where the books start paying for themselves.', deliverables: ['Board / investor pack', 'Operating dashboards', 'Forecast & scenarios'], icon: <path d="M4 17L9 12l5 5 3-4 3-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/> },
 ]
 
 const CASES = [
-  { tag: 'Manufacturing', stat: '99%', suffix: '', statLabel: 'Books reconciled and source-traced', client: 'Distressed beverage manufacturer', text: 'Rebuilt financials for a court-appointed receivership — clean books, a COGS framework, and an inventory strategy that gave the receiver decision-ready visibility within six weeks.' },
-  { tag: 'Technology, Media & Telecom', stat: '5,500', suffix: '+', statLabel: 'Transactions reconstructed for diligence', client: 'TMT platform, public-market readiness', text: 'Led finance readiness for a TMT platform heading to public markets — normalized reporting, reconciled balance sheet, and investor-grade workpapers that survived diligence intact.' },
-  { tag: 'Aviation', stat: 'On time', suffix: '', statLabel: 'DOT regulatory deadline met', client: 'Post Chapter 11 commercial airline', text: 'Built complete accounting infrastructure for a post-Chapter 11 airline under a hard DOT regulatory deadline, coordinating with external aviation counsel to certify on schedule.' },
+  { tag: 'Manufacturing', stat: '99%', suffix: '', statLabel: 'Books reconciled and source-traced', client: 'Distressed beverage manufacturer', text: 'Rebuilt the financials for a court-appointed receivership. Clean books, a COGS framework, and an inventory position the receiver could work from, inside six weeks.' },
+  { tag: 'Technology, Media & Telecom', stat: '5,500', suffix: '+', statLabel: 'Transactions reconstructed for diligence', client: 'TMT platform, public-market readiness', text: 'Led finance readiness for a TMT platform going to public markets. We normalised the reporting, reconciled the balance sheet, and built workpapers that came through diligence without a restatement.' },
+  { tag: 'Aviation', stat: 'On time', suffix: '', statLabel: 'DOT regulatory deadline met', client: 'Post Chapter 11 commercial airline', text: 'Built the accounting infrastructure for a post-Chapter 11 airline against a hard DOT deadline. We worked alongside their aviation counsel and certified on schedule.' },
 ]
 
 export default function Home() {
@@ -209,7 +209,7 @@ export default function Home() {
               <span className="eyebrow">How we work</span>
               <h2 className="h-section h-section--light">From first call<br /><em>to your monthly financial engine</em></h2>
             </div>
-            <p className="proc__intro">Five steps, sequenced. Each one has a defined deliverable, a clear hand-off, and an owner on our side. Click any step to expand.</p>
+            <p className="proc__intro">Five steps. Each one has a deliverable, a hand-off, and a named owner on our side. Click any step for the detail.</p>
           </div>
           <div className="proc__steps">
             <div className="proc__track" />
@@ -243,7 +243,7 @@ export default function Home() {
               <span className="eyebrow">Proven results</span>
               <h2 className="h-section">We&apos;ve done this before</h2>
             </div>
-            <p className="cases__intro">From court-appointed receivership stabilizations to public-market readiness, our work speaks for itself — and so do the receivers, lenders, and counsel who keep calling us back.</p>
+            <p className="cases__intro">Receivership stabilisations, public-market readiness, and filings against regulatory deadlines. The receivers, lenders, and counsel we work with tend to call us again, which is the part we pay attention to.</p>
           </div>
           <div className="cases__grid">
             {CASES.map(c => (
