@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const STEPS = [
   { n: '01', name: 'Response within 24 hours', desc: 'Every enquiry is read personally by a senior partner. You will hear back the next business day, at the latest.' },
-  { n: '02', name: 'A free 30-minute discovery call', desc: 'No obligation. We listen to the situation and tell you, honestly, whether Nexus North is the right firm for it.' },
-  { n: '03', name: 'A scoped, transparent proposal', desc: 'If there is a fit, you receive a clear proposal with scope, timeline, and fixed pricing. No retainer template.' },
+  { n: '02', name: 'A 30-minute discovery call, free', desc: 'We listen to the situation and tell you whether Nexus North is the right firm for it. If we are not, we will say so on the call.' },
+  { n: '03', name: 'A scoped, transparent proposal', desc: 'If there is a fit, you receive a proposal with the scope, the timeline, and fixed pricing in writing.' },
 ]
 
 const SERVICES = [
@@ -35,6 +35,7 @@ function ContactForm() {
       <span className="ct-form-eyebrow">Send a message</span>
       <h2 className="ct-form-title">Where is your finance<br /><em>function today</em></h2>
       <form className="ct-form" onSubmit={handleSubmit}>
+        <input type="hidden" name="source" value="Contact page form" />
         <div className="ct-form__row">
           <div className="ct-form__field">
             <label className="ct-form__label" htmlFor="name">Full Name <span className="req">*</span></label>
@@ -63,7 +64,7 @@ function ContactForm() {
         <div className="ct-form__row ct-form__row--single">
           <div className="ct-form__field">
             <label className="ct-form__label" htmlFor="message">How can we help <span className="req">*</span></label>
-            <textarea id="message" name="message" required className="ct-form__textarea" placeholder="Tell us about the situation: what's happening with your finances, what's been tried, and what would good look like in 90 days." />
+            <textarea id="message" name="message" required className="ct-form__textarea" placeholder="Tell us about the situation: what is happening with your finances, what has been tried, and what good would look like in 90 days." />
             <ValidationError field="message" errors={state.errors} />
           </div>
         </div>
@@ -92,14 +93,9 @@ export default function Contact() {
           <div className="page-hero__inner" style={{gridTemplateColumns:'1fr'}}>
             <div>
               <span className="eyebrow eyebrow--light">Get in touch</span>
-              <h1 className="page-hero__title" style={{
-                fontFamily: 'var(--sans)',
-                fontSize: 'clamp(36px, 4.2vw, 64px)',
-                letterSpacing: '-0.025em',
-                lineHeight: 1.05,
-              }}>
+              <h1 className="page-hero__title">
                 Tell us the situation,<br />
-                <em style={{ fontFamily: 'var(--sans)', fontStyle: 'italic' }}>we&apos;ll bring the rigour</em>
+                <em>we will bring the rigour</em>
               </h1>
             </div>
           </div>
@@ -109,7 +105,6 @@ export default function Contact() {
       <section className="ct-page">
         <div className="container">
           <div className="ct-grid">
-            {/* LEFT — WHAT TO EXPECT */}
             <div className="ct-info">
               <h2 className="ct-info__head">What happens<br /><em>after you send it</em></h2>
               <div className="ct-steps">
@@ -133,7 +128,7 @@ export default function Contact() {
                   <div className="ct-detail__dot" />
                   <div><div className="ct-detail__label">Phone</div><div className="ct-detail__value">+1 (647) 927-1801</div></div>
                 </a>
-                <a href="https://ca.linkedin.com/company/nexusnorthsolutions" target="_blank" rel="noreferrer" className="ct-detail">
+                <a href="https://www.linkedin.com/company/nexusnorthsolutions/" target="_blank" rel="noreferrer" className="ct-detail">
                   <div className="ct-detail__dot" />
                   <div><div className="ct-detail__label">LinkedIn</div><div className="ct-detail__value">Nexus North Solutions</div></div>
                 </a>
@@ -143,8 +138,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* RIGHT — FORM */}
             <ContactForm />
           </div>
         </div>

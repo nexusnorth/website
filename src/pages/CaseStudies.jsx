@@ -35,18 +35,18 @@ const CASES_LONG = [
     n: '04', industry: 'Technology',
     tag: 'Insolvency · Acquisition Advisory',
     client: 'Tech business acquired out of insolvency',
-    role: 'Advisor to the acquiring creditor', horizon: 'Diligence → day-one playbook',
+    role: 'Advisor to the acquiring creditor', horizon: 'Diligence to day-one playbook',
     outcomeStat: 'Day 1', outcomeShort: 'Day-one operating discipline, from close',
     challenge: 'A creditor acquiring a tech business out of insolvency. Rapid diligence required. Operating controls had to be in place from the close date.',
     solution: 'Transaction analysis and a day-one relaunch roadmap: operating model, core processes, near-term financial controls. Cash and reporting controls live from close.',
-    results: ['Day-one controls live from close', 'Structured transition with clear accountability', 'Practical growth framework', 'Positioned for successful market reentry'],
+    results: ['Day-one controls live from close', 'Structured transition with clear accountability', 'Growth framework the operator could run from', 'Positioned for successful market reentry'],
   },
 ]
 
 export default function CaseStudies() {
   return (
     <main>
-      {/* HERO — Inter 92px matching About page */}
+      {/* HERO */}
       <section className="page-hero">
         <div className="page-hero__bg" /><div className="page-hero__glow" />
         <div className="container">
@@ -58,14 +58,9 @@ export default function CaseStudies() {
           <div className="page-hero__inner" style={{ gridTemplateColumns: '1fr' }}>
             <div>
               <span className="eyebrow eyebrow--light">Proven results</span>
-              <h1 className="page-hero__title" style={{
-                fontFamily: 'var(--sans)',
-                fontSize: 'clamp(36px, 4.2vw, 64px)',
-                letterSpacing: '-0.025em',
-                lineHeight: 1.05,
-              }}>
+              <h1 className="page-hero__title">
                 Real Complexity,<br />
-                <em style={{ fontFamily: 'var(--sans)', fontStyle: 'italic' }}>Real Outcomes</em>
+                <em>Real Outcomes</em>
               </h1>
             </div>
           </div>
@@ -79,7 +74,7 @@ export default function CaseStudies() {
             <div className="cs-index__head">
               <div>#</div>
               <div>Industry</div>
-              <div>Client & mandate</div>
+              <div>Client &amp; mandate</div>
               <div>Outcome</div>
               <div></div>
             </div>
@@ -89,7 +84,7 @@ export default function CaseStudies() {
                 <div className="cs-index__industry">{c.industry}</div>
                 <div className="cs-index__client">
                   {c.client}<br />
-                  <span style={{ fontSize: 13, fontFamily: 'var(--sans)', fontWeight: 400, color: 'var(--text-light)' }}>{c.tag}</span>
+                  <span className="cs-index__client-tag">{c.tag}</span>
                 </div>
                 <div className="cs-index__outcome">
                   <strong>{c.outcomeStat}</strong>
@@ -108,7 +103,7 @@ export default function CaseStudies() {
           {CASES_LONG.map(c => (
             <div key={c.n} id={`case-${c.n}`} className="csd">
               <div className="csd__head">
-                <div className="csd__num">{c.n}<sup>/ 04</sup></div>
+                <div className="csd__num">{c.n}</div>
                 <div>
                   <span className="csd__tag">{c.industry}</span>
                   <h2 className="csd__title">{c.client}</h2>
@@ -116,7 +111,7 @@ export default function CaseStudies() {
                 <div className="csd__topline">
                   <div className="csd__topline-label">Engagement details</div>
                   <div className="csd__topline-value">{c.role}</div>
-                  <div className="csd__topline-value" style={{ fontSize: 14, fontWeight: 400, color: 'var(--text-light)' }}>{c.horizon}</div>
+                  <div className="csd__topline-value csd__topline-value--sub">{c.horizon}</div>
                 </div>
               </div>
               <div className="csd__body">
@@ -147,11 +142,11 @@ export default function CaseStudies() {
           <div className="cta__inner">
             <div>
               <span className="eyebrow eyebrow--light">Your situation</span>
-              <h2 className="cta__title" style={{ marginTop: 22, fontSize: 'clamp(28px, 3.2vw, 46px)' }}>
-                Ready to write your own<br />
-                <em>success story</em>
+              <h2 className="cta__title" style={{ marginTop: 22 }}>
+                Bring us the file<br />
+                <em>that has to hold up</em>
               </h2>
-              <p className="cta__sub">Every engagement starts with a free 30-minute discovery call.</p>
+              <p className="cta__sub">Every engagement starts with a 30-minute call, free. Tell us what is happening and we will tell you what it would take.</p>
             </div>
             <div className="cta__actions">
               <Link to="/contact" className="btn btn--primary">Schedule a Discovery Call <span className="arrow">→</span></Link>

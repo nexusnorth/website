@@ -37,17 +37,11 @@ export default function Services() {
           <div className="page-hero__inner">
             <div>
               <span className="eyebrow eyebrow--light">Our Services</span>
-              <h1 className="page-hero__title" style={{
-                fontFamily: 'var(--sans)',
-                fontSize: 'clamp(36px, 4.2vw, 64px)',
-                letterSpacing: '-0.025em',
-                lineHeight: 1.05,
-              }}>
+              <h1 className="page-hero__title">
                 Full financial stack,<br />
-                <em style={{ fontFamily: 'var(--sans)', fontStyle: 'italic' }}>around your business</em>
+                <em>around your business</em>
               </h1>
             </div>
-
           </div>
         </div>
       </section>
@@ -57,7 +51,7 @@ export default function Services() {
         <div className="container">
           {SERVICES_LONG.map(s => (
             <article key={s.n} className="svc-row">
-              <div className="svc-row__num">{s.n}<sup>/ 03</sup></div>
+              <div className="svc-row__num">{s.n}</div>
               <div className="svc-row__body">
                 <span className="svc-row__tag">{s.tag}</span>
                 <h2 className="svc-row__name">{s.title}</h2>
@@ -66,7 +60,7 @@ export default function Services() {
               </div>
               <div className="svc-row__capabilities">
                 <ul className="svc-row__list">
-                  <li className="svc-row__list-label">What&apos;s included</li>
+                  <li className="svc-row__list-label">What is included</li>
                   {s.items.map(item => <li key={item}>{item}</li>)}
                 </ul>
               </div>
@@ -88,7 +82,7 @@ export default function Services() {
           </div>
           <div className="fcr-feature__body">
             <div className="fcr-feature__price">
-              <span className="fcr-feature__price-n">2<em style={{fontSize:'0.65em'}}> weeks</em></span>
+              <span className="fcr-feature__price-n">2 weeks</span>
               <span className="fcr-feature__price-l">Industry based, fixed fee, scoped on the first call.</span>
               <div className="fcr-feature__meta">
                 <div className="fcr-feature__meta-item"><div className="fcr-feature__meta-label">Format</div><div className="fcr-feature__meta-value">2-week agile review</div></div>
@@ -110,7 +104,7 @@ export default function Services() {
             </ul>
           </div>
           <div className="fcr-feature__cta-row">
-            <p className="fcr-feature__cta-note"><strong>Not sure if you need the full diagnostic?</strong> A 30-minute discovery call is enough for us to tell you, honestly, whether the Financial Clarity Report is the right starting point.</p>
+            <p className="fcr-feature__cta-note"><strong>Wondering whether you need the full diagnostic?</strong> A 30-minute call is usually enough for us to tell you whether the Financial Clarity Report is the right starting point.</p>
             <Link to="/contact" className="btn btn--primary">Enquire about the report <span className="arrow">→</span></Link>
           </div>
         </div>
@@ -144,9 +138,9 @@ export default function Services() {
         <div className="container">
           <div className="cta__inner">
             <div>
-              <span className="eyebrow eyebrow--light">Let&apos;s talk</span>
-              <h2 className="cta__title" style={{marginTop:22, fontSize:'clamp(28px, 3.2vw, 46px)'}}>Not sure which engagement fits?<br /><em>Start with a discovery call</em></h2>
-              <p className="cta__sub">Book a free 30-minute discovery call. We will tell you, honestly, which service maps to your situation.</p>
+              <span className="eyebrow eyebrow--light">Let us talk</span>
+              <h2 className="cta__title" style={{marginTop:22}}>Wondering which engagement fits?<br /><em>Start with a discovery call</em></h2>
+              <p className="cta__sub">Book a 30-minute call, free. We will tell you which service maps to your situation, and say so if none of them do.</p>
             </div>
             <div className="cta__actions">
               <Link to="/contact" className="btn btn--primary">Book a Discovery Call <span className="arrow">→</span></Link>

@@ -46,9 +46,9 @@ export default function Article() {
           <div className="page-hero__inner" style={{ gridTemplateColumns: '1fr' }}>
             <div>
               <span className="eyebrow eyebrow--light">{article.category}</span>
-              <h1 className="page-hero__title" style={{ fontFamily: 'var(--serif)', fontSize: 72, lineHeight: 1.06, letterSpacing: '-0.02em', maxWidth: '20ch' }}>
+              <h1 className="page-hero__title" style={{ maxWidth: '22ch' }}>
                 {article.title}<br />
-                <em style={{ fontFamily: 'var(--serif)', fontSize: 72 }}>{article.titleItalic}</em>
+                <em>{article.titleItalic}</em>
               </h1>
               {article.kicker && <p className="art-kicker">{article.kicker}</p>}
               <div className="art-byline">

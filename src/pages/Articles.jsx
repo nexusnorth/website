@@ -36,9 +36,9 @@ export default function Articles() {
           <div className="page-hero__inner" style={{ gridTemplateColumns: '1fr' }}>
             <div>
               <span className="eyebrow eyebrow--light">Insights</span>
-              <h1 className="page-hero__title" style={{ fontFamily: 'var(--sans)', fontSize: 92, lineHeight: 1.05, letterSpacing: '-0.025em' }}>
+              <h1 className="page-hero__title">
                 Finance intelligence,<br />
-                <em style={{ fontFamily: 'var(--sans)', fontSize: 92 }}>straight from the field</em>
+                <em>straight from the field</em>
               </h1>
             </div>
           </div>

@@ -5,19 +5,19 @@ const TIMELINE = [
     year: '2024',
     label: 'Origin',
     chapter: 'Inside a family office',
-    body: 'The team that became Nexus North was assembled inside a multi-asset family office to manage books across the group and its portfolio companies. The remit was simple: institutional-grade reporting, end to end, with no room for slippage.'
+    body: 'The team that became Nexus North was assembled inside a multi-asset family office to manage books across the group and its portfolio companies. The remit was to run reporting end to end at a standard the group could take to its lenders and its auditors.'
   },
   {
     year: 'Jan 2025',
     label: 'Independence',
     chapter: 'Spun out as Nexus North',
-    body: 'After delivering the discipline the family office had been missing, the team was given the freedom to commercialize the work. Nexus North launched as a standalone advisory in January 2025, keeping the same operating standard and applying it for outside clients.'
+    body: 'Once reporting inside the family office was running properly, the team was given the freedom to take the work to outside clients. Nexus North launched as a standalone advisory in January 2025 and kept the same operating standard.'
   },
   {
     year: 'Today',
     label: 'Where we are',
-    chapter: 'Seven industries. One operating standard.',
-    body: 'Manufacturing, technology, aviation, investment management, telecom, healthcare, and high-growth founders. A team of ten, tech-forward, with full client retention. The standard has not moved.'
+    chapter: 'Seven industries, one operating standard',
+    body: 'Manufacturing, technology, aviation, investment management, telecom, healthcare, and founder-led growth companies. Ten people, and every client we have taken on is still with us.'
   },
 ]
 
@@ -35,12 +35,12 @@ const PRINCIPLES = [
   {
     n: '03',
     name: 'Tech-forward, by default',
-    desc: 'We automate the parts of close and reporting that should be automated, and we build inside the systems your team already uses. How the process runs is part of what we hand over, not something we work out later.'
+    desc: 'We automate the parts of close and reporting that should be automated, and we build inside the systems your team already uses. How the process runs is part of what we hand over, documented as we build it.'
   },
   {
     n: '04',
     name: 'Structured Readiness Framework',
-    desc: 'We measure financial infrastructure health through a structured readiness framework, scoring across reporting, controls, close discipline, and decision-readiness. Every engagement produces a clear, quantified view of where things stand and what the next quarter requires.'
+    desc: 'We score every engagement against the same framework: reporting, controls, close discipline, and how ready the numbers are for a decision. You get the score, the gaps behind it, and what the next quarter needs.'
   },
 ]
 
@@ -49,14 +49,14 @@ const LEADERSHIP = [
     name: 'Siddharth Dave',
     initials: 'SD',
     role: 'Founder & Operating CEO',
-    bio: 'Founded Nexus North after building the institutional finance function inside a multi-asset family office. Leads firm strategy and every client engagement. Hands-on across financial reconstruction, transaction advisory, and CFO-level infrastructure.',
+    bio: 'Founded Nexus North after building the finance function inside a multi-asset family office. Leads firm strategy and stays hands-on across financial reconstruction, transaction advisory, and CFO work.',
     creds: ['Financial Reconstruction', 'Transaction Advisory', 'CFO Advisory'],
   },
   {
     name: 'Steven Strauss',
     initials: 'SS',
     role: 'Executive Director',
-    bio: 'Owns client delivery and business development. Translates senior judgement into a repeatable operating cadence and ensures every engagement holds to the same standard on every cycle.',
+    bio: 'Owns client delivery and business development. Makes sure every engagement holds to the same standard on every cycle.',
     creds: ['Client Delivery', 'Operating Discipline', 'Business Development'],
   },
   {
@@ -80,28 +80,28 @@ const DELIVERY = [
     name: 'Virti Shah',
     initials: 'VS',
     role: 'Finance & Accounting Associate',
-    bio: 'Owns monthly close, reconciliations, and financial statement preparation across multiple client engagements. The discipline behind diligence-grade books.',
+    bio: 'Owns monthly close, reconciliations, and financial statement preparation across several client engagements.',
     creds: ['Monthly Close', 'Reconciliations', 'Financial Statements'],
   },
   {
     name: 'Harsh Dungrani',
     initials: 'HD',
     role: 'Finance & Audit Associate',
-    bio: 'Supports client delivery across bookkeeping and audit workstreams, developing deep expertise in financial controls and reporting accuracy.',
+    bio: 'Supports client delivery across bookkeeping and audit workstreams, building expertise in financial controls and reporting accuracy.',
     creds: ['Bookkeeping', 'Audit Support', 'Financial Controls'],
   },
   {
     name: 'Akshita Shingala',
     initials: 'AS',
     role: 'Business Operations Associate',
-    bio: 'Supports workflow management, client coordination, and internal process execution across the firm with a strong operational growth mindset.',
+    bio: 'Runs workflow management, client coordination, and internal process execution across the firm.',
     creds: ['Operations', 'Client Coordination', 'Process Execution'],
   },
   {
     name: 'Ryan Bugia',
     initials: 'RB',
     role: 'Data & Reporting Specialist',
-    bio: 'Builds reporting automation, dashboards, and analytical infrastructure for client-facing products. Bridges the gap between raw data and decision-ready output.',
+    bio: 'Builds reporting automation, dashboards, and the data pipelines behind client reporting.',
     creds: ['SQL & Python', 'Reporting Automation', 'Dashboards'],
   },
 ]
@@ -109,7 +109,7 @@ const DELIVERY = [
 export default function About() {
   return (
     <main>
-      {/* HERO — Inter 92px, full-width single column, matches Case Studies */}
+      {/* HERO */}
       <section className="page-hero">
         <div className="page-hero__bg" /><div className="page-hero__glow" />
         <div className="container">
@@ -121,14 +121,9 @@ export default function About() {
           <div className="page-hero__inner" style={{ gridTemplateColumns: '1fr' }}>
             <div>
               <span className="eyebrow eyebrow--light">Who We Are</span>
-              <h1 className="page-hero__title" style={{
-                fontFamily: 'var(--sans)',
-                fontSize: 'clamp(36px, 4.2vw, 64px)',
-                letterSpacing: '-0.025em',
-                lineHeight: 1.05,
-              }}>
+              <h1 className="page-hero__title">
                 Ten people,<br />
-                <em style={{ fontFamily: 'var(--sans)', fontStyle: 'italic' }}>Ready for Scale</em>
+                <em>one operating standard</em>
               </h1>
             </div>
           </div>
@@ -216,18 +211,18 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA — matches Case Studies exactly */}
+      {/* CTA */}
       <section className="cta">
         <div className="cta__bg" /><div className="cta__glow" />
         <div className="container">
           <div className="cta__inner">
             <div>
               <span className="eyebrow eyebrow--light">Work with us</span>
-              <h2 className="cta__title" style={{ marginTop: 22, fontSize: 'clamp(28px, 3.2vw, 46px)' }}>
+              <h2 className="cta__title" style={{ marginTop: 22 }}>
                 Your financial infrastructure<br />
                 <em>built around your business</em>
               </h2>
-              <p className="cta__sub">Every engagement starts with a free 30-minute discovery call. No obligation.</p>
+              <p className="cta__sub">Every engagement starts with a 30-minute call, free. The same partner who scopes it leads it.</p>
             </div>
             <div className="cta__actions">
               <Link to="/contact" className="btn btn--primary">Book a Discovery Call <span className="arrow">→</span></Link>

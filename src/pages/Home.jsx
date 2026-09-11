@@ -9,16 +9,16 @@ const STATS = [
 ]
 
 const PILLARS = [
-  { n: '01', t: 'Precision', d: 'Defensible, audit-ready records that stakeholders trust. Every figure traces to a source.' },
-  { n: '02', t: 'Strategic', d: 'We translate numbers into decisions, not just reports. Forward-looking by default.' },
-  { n: '03', t: 'Scalable',  d: 'Finance systems designed to grow with your complexity, from seed to public markets.' },
+  { n: '01', t: 'Precision', d: 'Every figure traces back to a source document. When somebody asks where a number came from, we can show them.' },
+  { n: '02', t: 'Judgement', d: 'We close the books, then we read them with you. You get our view on what the numbers mean for the coming quarter.' },
+  { n: '03', t: 'Scalable',  d: 'The setup works at seed stage and it still works at public-market reporting. We build it once, properly.' },
 ]
 
 const DIFFERENTIATORS = [
-  { n: '01', name: 'Evidence-Backed Reporting', desc: "Every figure in our clients' financials traces to a source document. Nothing is unsubstantiated, nothing is implied — only what can be defended in a board room or a deal room." },
-  { n: '02', name: 'Chartered Discipline, CFO Perspective', desc: 'Every engagement is filtered through a forward-looking analytical lens. The deliverable is financial insight your leadership can act on — not a backwards-facing compliance file.' },
-  { n: '03', name: 'Adaptable and Tech-Forward', desc: 'Early adopters of AI-integrated workflows and process automation. Every engagement is built around your contextual data and the systems your team already runs on.' },
-  { n: '04', name: 'Structured Readiness Framework', desc: 'We measure financial infrastructure health through a structured readiness framework — a clear, quantified view of where things stand and what the next quarter requires.' },
+  { n: '01', name: 'Evidence-Backed Reporting', desc: "Every figure in our clients' financials traces to a source document. If a number cannot be supported, it stays out of the statements. That is what makes the work hold up in a board room or a deal room." },
+  { n: '02', name: 'Chartered Discipline, CFO Perspective', desc: 'Chartered accountants do the work and a CFO reads the output. You get the statements, and you get our read on what they mean for the decisions in front of you.' },
+  { n: '03', name: 'Adaptable and Tech-Forward', desc: 'We work inside the systems your team already runs on and automate the parts that should be automated. Nobody has to change how they work to get reporting out on time.' },
+  { n: '04', name: 'Structured Readiness Framework', desc: 'We score your finance function against a fixed framework and give you the number. It shows where things stand today and what the next quarter needs, in priority order.' },
 ]
 
 const SERVICES = [
@@ -69,12 +69,12 @@ export default function Home() {
         <div className="container">
           <div className="hero__inner">
             <div>
-              <span className="eyebrow eyebrow--light fade-up fade-up-1">Global · CFO Advisory · Built to institutional grade</span>
+              <span className="eyebrow eyebrow--light fade-up fade-up-1">Toronto · CFO advisory and financial operations</span>
               <h1 className="hero__title fade-up fade-up-2">
                 Your Financial<br /><em>Command Centre</em>
               </h1>
               <p className="hero__sub fade-up fade-up-3">
-                Nexus North delivers CFO-level strategy, rigorous financial operations, and hands-on advisory for high-growth companies that can&apos;t afford to get the numbers wrong.
+                We run the finance function for companies whose numbers have to hold up in front of a board, a lender, or a court. That means books you can rely on, reporting on a schedule, and somebody senior to read it with you.
               </p>
               <div className="hero__actions fade-up fade-up-4">
                 <Link to="/contact" className="btn btn--primary">Book a Free Discovery Call <span className="arrow">→</span></Link>
@@ -84,15 +84,15 @@ export default function Home() {
             <div className="hero__meta fade-up fade-up-5">
               <div className="hero__meta-item">
                 <div className="hero__meta-label">Headquartered</div>
-                <div className="hero__meta-value">Toronto<em> · serving clients globally</em></div>
+                <div className="hero__meta-value">Toronto, serving clients globally</div>
               </div>
               <div className="hero__meta-item">
-                <div className="hero__meta-label">How we partner</div>
-                <div className="hero__meta-value"><em>Scoped to your situation</em></div>
+                <div className="hero__meta-label">What we take on</div>
+                <div className="hero__meta-value">Scoped on the first call</div>
               </div>
               <div className="hero__meta-item">
                 <div className="hero__meta-label">Trusted by</div>
-                <div className="hero__meta-value">Receivers, family offices, PE &amp; VC-backed companies</div>
+                <div className="hero__meta-value">Receivers, family offices, PE and VC-backed companies</div>
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
             <div className="hero__stats-grid">
               {STATS.map(s => (
                 <div key={s.label} className="hero__stat">
-                  <div className="hero__stat-n">{s.n}<sup>{s.suffix}</sup></div>
+                  <div className="hero__stat-n">{s.n}{s.suffix && <span className="hero__stat-suffix">{s.suffix}</span>}</div>
                   <div className="hero__stat-label">{s.label}</div>
                 </div>
               ))}
@@ -116,15 +116,15 @@ export default function Home() {
         <div className="container">
           <div className="pos__grid">
             <div>
-              <span className="eyebrow">What we do differently</span>
+              <span className="eyebrow">Where we fit</span>
               <h2 className="h-section pos__title">CFO-level thinking<br /><em>Operator-level execution</em></h2>
               <p className="lede pos__lede">
-                Most accounting firms give you compliance. We give you clarity — accurate books, decision-ready reporting, and a finance partner who understands what is actually at stake when the numbers go in front of a board, a lender, or a court.
+                Most of our clients come to us when their numbers are about to be examined by somebody: a board, a lender, a buyer, or a court. We close the books properly, and then we sit down and read them with you. The reporting has to survive the questions that follow.
               </p>
               <div className="pillars">
                 {PILLARS.map(p => (
                   <div key={p.n} className="pillar">
-                    <div className="pillar__num">{p.n}<sup>/ 03</sup></div>
+                    <div className="pillar__num">{p.n}</div>
                     <div>
                       <div className="pillar__title">{p.t}</div>
                       <p className="pillar__desc">{p.d}</p>
@@ -137,7 +137,7 @@ export default function Home() {
             <aside className="fcr">
               <span className="fcr__eyebrow">Financial Clarity Report</span>
               <h3 className="fcr__title">Not sure where your books stand</h3>
-              <p className="fcr__lede">A fixed-fee, two-week engagement that gives you a complete picture of your financial health — gaps, risks, and a prioritized action plan, scored against our readiness framework.</p>
+              <p className="fcr__lede">Two weeks, fixed fee. We review the books and hand you a written report: the gaps, the risks, and what to fix first, scored against our readiness framework.</p>
               <ul className="fcr__list">
                 {['Bank & reconciliation review','Balance sheet integrity check','P&L accuracy assessment','Readiness score & priority action plan'].map(item => (
                   <li key={item}><span className="check">✓</span>{item}</li>
@@ -145,7 +145,7 @@ export default function Home() {
               </ul>
               <div className="fcr__price">
                 <span className="fcr__price-n">2 weeks</span>
-                <span className="fcr__price-l">/ fixed fee · scoped on first call</span>
+                <span className="fcr__price-l">fixed fee · scoped on first call</span>
               </div>
               <Link to="/contact" className="btn btn--primary btn--block">Enquire about the report <span className="arrow">→</span></Link>
             </aside>
@@ -159,9 +159,9 @@ export default function Home() {
           <div className="diff__head">
             <div>
               <span className="eyebrow">Why Nexus North</span>
-              <h2 className="h-section diff__title">How we&apos;re different</h2>
+              <h2 className="h-section diff__title">How we work</h2>
             </div>
-            <p className="diff__intro">Four operating principles run through every Nexus North engagement — from a two-week diagnostic to a multi-year fractional-CFO partnership. They are what makes our work hold up in a board room, in due diligence, and in transactions.</p>
+            <p className="diff__intro">Four things hold across every engagement we take on, from a two-week diagnostic to a multi-year fractional CFO arrangement. They are the reason the work stands up once somebody starts asking questions.</p>
           </div>
           <div className="diff__list">
             {DIFFERENTIATORS.map(d => (
@@ -183,12 +183,11 @@ export default function Home() {
               <span className="eyebrow">Our services</span>
               <h2 className="h-section">The full financial stack<br /><em>without the full-time hire</em></h2>
             </div>
-            <p className="svc__intro">A Financial Command Centre, run with an operator&apos;s mentality. Diligent books, decision-ready reporting, and senior judgement on the calls that matter — assembled around your business and only the work you actually need.</p>
+            <p className="svc__intro">We scope each engagement on the first call and you pay for the work you need. Some clients use us for the monthly close. Some bring us in for one transaction. Some hand over the whole finance function.</p>
           </div>
           <div className="svc__grid">
-            {SERVICES.map((s, i) => (
+            {SERVICES.map((s) => (
               <article key={s.title} className="svc__card">
-                <div className="svc__index">{String(i+1).padStart(2,'0')} · Service</div>
                 <div className="svc__icon">{s.icon}</div>
                 <h3 className="svc__name">{s.title}</h3>
                 <p className="svc__desc">{s.desc}</p>
@@ -216,7 +215,7 @@ export default function Home() {
             {PROCESS.map((p, i) => (
               <button key={p.n} className={`proc__step${active === i ? ' proc__step--active' : ''}`} onClick={() => setActive(i)}>
                 <div className="proc__circle"><svg viewBox="0 0 24 24" fill="none">{p.icon}</svg></div>
-                <div className="proc__num">{p.n} / 05</div>
+                <div className="proc__num">{p.n}</div>
                 <div className="proc__name">{p.title}</div>
               </button>
             ))}
@@ -241,7 +240,7 @@ export default function Home() {
           <div className="cases__head">
             <div>
               <span className="eyebrow">Proven results</span>
-              <h2 className="h-section">We&apos;ve done this before</h2>
+              <h2 className="h-section">We have done this before</h2>
             </div>
             <p className="cases__intro">Receivership stabilisations, public-market readiness, and filings against regulatory deadlines. The receivers, lenders, and counsel we work with tend to call us again, which is the part we pay attention to.</p>
           </div>
@@ -249,7 +248,7 @@ export default function Home() {
             {CASES.map(c => (
               <article key={c.tag} className="case">
                 <span className="case__tag">{c.tag}</span>
-                <div className="case__stat">{c.stat}{c.suffix && <sup style={{fontSize:'0.5em',verticalAlign:'super'}}>{c.suffix}</sup>}</div>
+                <div className="case__stat">{c.stat}{c.suffix && <span className="case__stat-suffix">{c.suffix}</span>}</div>
                 <span className="case__stat-l">{c.statLabel}</span>
                 <div className="case__client">{c.client}</div>
                 <p className="case__desc">{c.text}</p>
@@ -266,9 +265,9 @@ export default function Home() {
         <div className="container">
           <div className="cta__inner">
             <div>
-              <span className="eyebrow eyebrow--light">Let&apos;s talk</span>
-              <h2 className="cta__title" style={{marginTop:22, fontSize:'clamp(28px, 3.2vw, 46px)'}}>Get the numbers right<br /><em>Smart decisions will follow</em></h2>
-              <p className="cta__sub">Every engagement starts with a free 30-minute discovery call. No obligation — just a structured conversation about where your finance function is, and where it needs to be.</p>
+              <span className="eyebrow eyebrow--light">Let us talk</span>
+              <h2 className="cta__title" style={{marginTop:22}}>Get the numbers right<br /><em>Smart decisions will follow</em></h2>
+              <p className="cta__sub">Every engagement starts with a 30-minute call, free. We go through where your finance function is now and what it needs to look like by next quarter. If we are not the right firm for the situation, we will say so on the call.</p>
             </div>
             <div className="cta__actions">
               <Link to="/contact" className="btn btn--primary">Book a Discovery Call <span className="arrow">→</span></Link>
