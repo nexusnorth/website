@@ -32,11 +32,11 @@ export default function SubscribeCTA() {
           <div>
             <span className="eyebrow eyebrow--light">Subscribe</span>
             <h2 className="cta__title" style={{ marginTop: 22 }}>
-              Notes from the desk,<br />
-              <em>in your inbox</em>
+              Join the<br />
+              <em>Nexus North network</em>
             </h2>
             <p className="cta__sub">
-              Field notes from inside live engagements. Receivership, public-market readiness, family-office reporting. Two emails a month at most, and you can unsubscribe from any of them.
+              A private list of operators, lenders, receivers and counsel. Frameworks we are building, what we are seeing across live engagements, and early access to new work.
             </p>
           </div>
           <div className="cta__actions">
@@ -44,8 +44,8 @@ export default function SubscribeCTA() {
               <div className="sub-success">
                 <span className="sub-success__mark">✓</span>
                 <div>
-                  <div className="sub-success__title">You are on the list</div>
-                  <div className="sub-success__sub">The next one goes out at the end of the month.</div>
+                  <div className="sub-success__title">You are in</div>
+                  <div className="sub-success__sub">We will be in touch when the next piece of work is ready.</div>
                 </div>
               </div>
             ) : (

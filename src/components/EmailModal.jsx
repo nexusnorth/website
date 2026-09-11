@@ -23,7 +23,7 @@ export default function EmailModal() {
     const onKey = (e) => { if (e.key === 'Escape') dismiss() }
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
-    const t = setTimeout(() => inputRef.current && inputRef.current.focus(), 320)
+    const t = setTimeout(() => inputRef.current && inputRef.current.focus({ preventScroll: true }), 320)
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
@@ -79,16 +79,16 @@ export default function EmailModal() {
             <div className="em-done">
               <span className="em-done__mark">✓</span>
               <div>
-                <div className="em-done__title">You are on the list</div>
-                <div className="em-done__sub">The next one goes out at the end of the month.</div>
+                <div className="em-done__title">You are in</div>
+                <div className="em-done__sub">We will be in touch when the next piece of work is ready.</div>
               </div>
             </div>
           ) : (
             <>
-              <span className="eyebrow eyebrow--light em-eyebrow">Nexus North</span>
-              <h2 className="em-title">Notes from<br /><em>the desk</em></h2>
+              <span className="eyebrow eyebrow--light em-eyebrow">The Nexus North Network</span>
+              <h2 className="em-title">What we are<br /><em>building next</em></h2>
               <p className="em-lede">
-                Every few weeks we write up something we ran into on a live file. Cash controls, close discipline, what diligence actually asks for. Two emails a month at most.
+                We keep a private list of operators, lenders, receivers and counsel. It carries the frameworks we are building, what we are seeing across live engagements, and early access to new work before it goes anywhere else.
               </p>
 
               <form className="em-form" onSubmit={submit}>
@@ -104,7 +104,7 @@ export default function EmailModal() {
                   onChange={(e) => { setEmail(e.target.value); if (state === 'error') setState('idle') }}
                 />
                 <button className="btn btn--primary em-submit" type="submit" disabled={state === 'sending'}>
-                  {state === 'sending' ? 'Sending' : 'Send them to me'}
+                  {state === 'sending' ? 'Sending' : 'Join the network'}
                   {state !== 'sending' && <span className="arrow">→</span>}
                 </button>
               </form>
@@ -114,7 +114,7 @@ export default function EmailModal() {
               )}
 
               <div className="em-fine">
-                We keep your address to ourselves. Unsubscribe from any email.
+                Your address stays with us. Nothing is shared, sold, or passed on.
               </div>
             </>
           )}
