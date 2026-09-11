@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import EmailModal from './components/EmailModal.jsx'
-import ScrollToTop from './components/ScrollToTop.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import CaseStudies from './pages/CaseStudies.jsx'
@@ -12,6 +12,18 @@ import Articles from './pages/Articles.jsx'
 import Article from './pages/Article.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
+
+/* React Router keeps the scroll position when the route changes, which is why
+   clicking Services from the footer opened Services at the footer. This resets
+   it on every navigation. Anchor links (/page#section) are left alone. */
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) return
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [pathname, hash])
+  return null
+}
 
 export default function App() {
   return (
