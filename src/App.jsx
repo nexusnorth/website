@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import EmailModal from './components/EmailModal.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import CaseStudies from './pages/CaseStudies.jsx'
@@ -15,6 +16,7 @@ import Terms from './pages/Terms.jsx'
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

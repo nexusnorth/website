@@ -1,0 +1,16 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
+/* React Router keeps the scroll position when you change route, which is why
+   clicking Services from the footer opened Services at the footer. This resets
+   it on every navigation. Anchor links (/page#section) are left alone. */
+export default function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) return
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [pathname, hash])
+
+  return null
+}
